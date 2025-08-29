@@ -1,12 +1,23 @@
+// src/app/layout.jsx
+import "./globals.css";
+import Navbar from "../components/Navbar";
+
 export const metadata = {
   title: "Kickstarter Clone",
-  description: "Proyecto estilo Kickstarter con login tradicional",
+  description: "Plataforma de crowdfunding",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="bg-gray-50">{children}</body>
+      <body>
+        {/* ✅ Navbar global */}
+        <Navbar />
+        
+        <main className="container mx-auto p-4">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
